@@ -1,7 +1,6 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Enables static export
-  basePath: "/my_portfolio", // Set GitHub repo name
+  output: "export",
+  basePath: "/my_portfolio", // Your repo name
   assetPrefix: "/my_portfolio/",
 };
 
