@@ -1,7 +1,8 @@
-const nextConfig = {
+export default {
   output: "export",
-  basePath: "/my_portfolio", // Your repo name
-  assetPrefix: "/my_portfolio/",
+  basePath: "/my_portfolio", 
+  assetPrefix: "/my-portfolio/",
+  images: {
+    unoptimized: true, // Fixes image loading issues
+  },
 };
-
-export default nextConfig;
