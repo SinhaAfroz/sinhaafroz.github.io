@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-        
+
         {/* Left: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-5xl font-bold text-gray-800">
@@ -43,14 +43,14 @@ const Hero = () => {
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
           <Image
-            src="/profile2.jpg" // Replace with your actual image path
+            src="/my_portfolio/profile2.jpg" // Add basePath
             alt="Sinha Afroz"
             width={400}
             height={400}
             className="rounded-2xl shadow-lg transition transform hover:scale-105 duration-300"
           />
         </div>
-        
+
       </div>
     </section>
   );
