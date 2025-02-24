@@ -1,7 +1,8 @@
 export default {
-  output: "export",
-  distDir: "out", 
-  basePath: "/my_portfolio",
-  assetPrefix: "/my_portfolio/",
-  images: { unoptimized: true },
-};
+    output: "export", // Enables static export in Next.js 15
+    distDir: "out", // The output directory
+    basePath: "/my_portfolio", // Required for GitHub Pages
+    assetPrefix: "/my_portfolio/", // Ensures correct asset loading
+    images: { unoptimized: true }, // Disable Next.js Image Optimization (since it doesn't work with static export)
+  };
+  
