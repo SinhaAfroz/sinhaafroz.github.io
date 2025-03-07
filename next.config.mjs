@@ -1,8 +1,9 @@
+const isProd = process.env.NODE_ENV === "production";
+
 export default {
-    output: "export", // Enables static export in Next.js 15
-    distDir: "out", // The output directory
-    basePath: "/my_portfolio", // Required for GitHub Pages
-    assetPrefix: "/my_portfolio/", // Ensures correct asset loading
-    images: { unoptimized: true }, // Disable Next.js Image Optimization (since it doesn't work with static export)
-  };
-  
+  output: "export",
+  distDir: "out",
+  basePath: isProd ? "/my_portfolio" : "", // Only use basePath in production
+  assetPrefix: isProd ? "/my_portfolio/" : "",
+  images: { unoptimized: true },
+};

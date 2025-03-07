@@ -21,7 +21,7 @@ const Hero = () => {
             Exploring AI, Bioinformatics & Computer Vision for groundbreaking research.
           </p>
 
-          <h1 className="text-4xl font-bold text-primary pt-12">
+          <h1 className="text-4xl font-bold text-navbar pt-12">
             <Typewriter words={["Sinha Afroz", "ML Enthusiast", "Software Engineer", "Aspiring Researcher"]} loop={true} cursor />
           </h1>
 
@@ -43,7 +43,7 @@ const Hero = () => {
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
           <Image
-            src="/my_portfolio/profile2.jpg" // Add basePath
+            src="/profile2.jpg" // Replace with your actual image path
             alt="Sinha Afroz"
             width={400}
             height={400}

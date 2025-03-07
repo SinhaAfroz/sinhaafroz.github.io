@@ -6,11 +6,9 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 const About = () => {
   return (
-    <section className="bg-background min-h-screen flex items-center justify-center py-12">
+    <section className="bg-background min-h-screen flex items-center justify-center py-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-      {/* <ParticleBackground /> */}
-
-        {/* Left: Image */}
+      {/* <ParticleBackground />  */}
         {/* <div className="md:w-1/3 mb-8 md:mb-0">
           <Image
             src="/profile2.jpg" // Update with your actual image path
