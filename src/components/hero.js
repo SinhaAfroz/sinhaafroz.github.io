@@ -42,13 +42,21 @@ const Hero = () => {
 
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+          {/* path for github */}
           <Image
-            src="/profile2.jpg" // Replace with your actual image path
+            src="/my_portfolio/profile2.jpg"             
             alt="Sinha Afroz"
             width={400}
             height={400}
             className="rounded-2xl shadow-lg transition transform hover:scale-105 duration-300"
           />
+          {/* <Image
+            src="/profile2.jpg"             
+            alt="Sinha Afroz"
+            width={400}
+            height={400}
+            className="rounded-2xl shadow-lg transition transform hover:scale-105 duration-300"
+          /> */}
         </div>
 
       </div>
