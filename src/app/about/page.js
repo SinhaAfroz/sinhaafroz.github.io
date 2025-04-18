@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
   return (
-    <section className="bg-gradient-to-br from-white via-sky-100 to-purple-100 dark:bg-darkBackground min-h-screen flex items-center justify-center py-16">
+    <section className="bg-gradient-to-br from-white via-sky-100 to-purple-100 min-h-screen flex items-center justify-center py-16">
       {/* <ParticleBackground /> */}
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
