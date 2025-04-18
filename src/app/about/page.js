@@ -2,29 +2,20 @@
 
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
-import ParticleBackground from "@/components/ParticleBackground";
+// import ParticleBackground from "@/components/ParticleBackground"; // Uncomment if you want it
 
 const About = () => {
   return (
-    <section className="bg-background min-h-screen flex items-center justify-center py-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-      {/* <ParticleBackground />  */}
-        {/* <div className="md:w-1/3 mb-8 md:mb-0">
-          <Image
-            src="/profile2.jpg" // Update with your actual image path
-            alt="Sinha Afroz"
-            width={350}
-            height={350}
-            className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
-          />
-        </div> */}
+    <section className="bg-gradient-to-br from-white via-sky-100 to-purple-100 dark:bg-darkBackground min-h-screen flex items-center justify-center py-16">
+      {/* <ParticleBackground /> */}
 
-        {/* Right: About Text */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
+        
+        {/* Left: About Text */}
         <div className="md:w-2/3 text-center md:text-left">
           <h1 className="text-4xl font-bold text-secondary">
             <Typewriter words={["Sinha Afroz", "ML Enthusiast", "Software Engineer", "Aspiring Researcher"]} loop={true} cursor />
           </h1>
-          {/* <h1 className="text-4xl font-bold text-primary">Sinha Afroz</h1> */}
 
           <p className="text-xl text-gray-700 mt-2 font-semibold">
             Graduate in Computer Science and Engineering | ML Enthusiast | Full-Stack Developer | Aspiring Researcher
@@ -81,18 +72,30 @@ const About = () => {
 
           {/* Contact Links */}
           <div className="mt-8 flex justify-center md:justify-start space-x-4">
-            <a href="https://www.linkedin.com/in/sinha-afroz" target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
+            <a href="https://www.linkedin.com/in/sinha-afroz" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
               LinkedIn
             </a>
-            <a href="https://github.com/SinhaAfroz" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
+            <a href="https://github.com/SinhaAfroz" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
               GitHub
             </a>
-            <a href="mailto:sinhaafroz16@gmail.com" className="bg-accent text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
+            <a href="mailto:sinhaafroz16@gmail.com" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
               Email
             </a>
           </div>
 
         </div>
+        
+       
+        {/* <div className="md:w-1/3 mb-8 md:mb-0">
+          <Image
+            src="/profile2.jpg"
+            alt="Sinha Afroz"
+            width={350}
+            height={350}
+            className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+          />
+        </div> */}
+
       </div>
     </section>
   );

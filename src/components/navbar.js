@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
-import { usePathname } from "next/navigation";
 import { AiOutlineHome, AiOutlineUser, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,37 +12,40 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="relative">
-      {/* Menu Button */}
+    <>
+      {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
-        className="fixed left-4 top-4 z-50 text-3xl p-3 bg-navbar text-white rounded-lg focus:outline-none"
+        className="fixed top-4 left-4 z-50 text-white bg-navbar p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-200"
       >
-        <FiMenu />
+        <FiMenu size={24} />
       </button>
 
-      {/* Sidebar Menu */}
-      {isOpen && (
-        <div className="fixed left-0 top-0 p-4 mt-16 ml-1 space-y-4 flex flex-col items-center z-40">
-          <Link href="/" className={`flex items-center justify-center w-12 h-12 rounded-lg ${pathname === "/" ? "bg-blue-500" : "bg-navbar hover:bg-gray-600"
-            }`} onClick={toggleMenu}>
-            <AiOutlineHome className="text-white text-2xl" />
-          </Link>
-          <Link href="/about" className={`flex items-center justify-center w-12 h-12 rounded-lg ${pathname === "/about" ? "bg-blue-500" : "bg-navbar hover:bg-gray-600"
-            }`} onClick={toggleMenu}>
-            <AiOutlineUser className="text-white text-2xl" />
-          </Link>
-          <Link href="/projects" className={`flex items-center justify-center w-12 h-12 rounded-lg ${pathname === "/projects" ? "bg-blue-500" : "bg-navbar hover:bg-gray-600"
-            }`} onClick={toggleMenu}>
-            <AiOutlineProject className="text-white text-2xl" />
-          </Link>
-          <Link href="/contact" className={`flex items-center justify-center w-12 h-12 rounded-lg ${pathname === "/contact" ? "bg-blue-500" : "bg-navbar hover:bg-gray-600"
-            }`} onClick={toggleMenu}>
-            <AiOutlineMail className="text-white text-2xl" />
-          </Link>
-        </div>
-      )}
-    </nav>
+      {/* Animated Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-16 z-40 flex flex-col items-center pt-20 pl-4 space-y-6 
+        transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+        <SidebarLink href="/" icon={<AiOutlineHome />} active={pathname === "/"} toggleMenu={toggleMenu} />
+        <SidebarLink href="/about" icon={<AiOutlineUser />} active={pathname === "/about"} toggleMenu={toggleMenu} />
+        <SidebarLink href="/projects" icon={<AiOutlineProject />} active={pathname === "/projects"} toggleMenu={toggleMenu} />
+        <SidebarLink href="/contact" icon={<AiOutlineMail />} active={pathname === "/contact"} toggleMenu={toggleMenu} />
+      </div>
+    </>
+  );
+};
+
+// 💅 Reusable Link Component
+const SidebarLink = ({ href, icon, active, toggleMenu }) => {
+  return (
+    <Link
+      href={href}
+      onClick={toggleMenu}
+      className={`flex items-center justify-center w-12 h-12 rounded-lg bg-navbar
+      ${active ? "bg-pink-300" : "hover:bg-gray-600"} transition-colors duration-200`}
+    >
+      <span className="text-white text-2xl">{icon}</span>
+    </Link>
   );
 };
 
