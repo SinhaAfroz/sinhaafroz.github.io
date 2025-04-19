@@ -57,7 +57,7 @@ const Hero = () => {
         <div className="md:w-1/2 flex justify-center items-center">
           <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-gradient-to-tr from-primary via-pink-400 to-secondary p-[6px] shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:rotate-2 transition-transform duration-500">
             <Image
-              src={isProd ? "/my_portfolio/profile2.jpg" : "/profile2.jpg"}
+              src={isProd ? "/sinhaafroz.github.io/profile2.jpg" : "/profile2.jpg"}
               alt="Sinha Afroz"
               width={500}
               height={500}
