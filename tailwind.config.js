@@ -24,14 +24,14 @@ module.exports = {
         darkText: '#EAEAEA', // Light text color for dark mode
 
       },
-      animation: {
-        snowfall: "snowfall 10s linear infinite",
-      },
       keyframes: {
         snowfall: {
-          "0%": { transform: "translateY(-10%)", opacity: "0" },
-          "100%": { transform: "translateY(100vh)", opacity: "1" },
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
         },
+      },
+      animation: {
+        snowfall: 'snowfall linear infinite',
       },
     },
   },

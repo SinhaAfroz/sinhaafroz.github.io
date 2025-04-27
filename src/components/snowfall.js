@@ -19,14 +19,15 @@ export default function Snowfall() {
     <div className="absolute w-full h-full overflow-hidden pointer-events-none">
       {flakes.map((flake) => (
         <div
-          key={flake.id}
-          className="absolute bg-secondary w-2 h-2 rounded-full animate-snowfall -z-10"
-          style={{
-            left: flake.left,
-            animationDuration: flake.duration,
-            opacity: flake.opacity,
-          }}
-        ></div>
+        key={flake.id}
+        className="absolute bg-secondary w-2 h-2 rounded-full animate-snowfall -z-1"
+        style={{
+          left: flake.left,
+          animationDuration: flake.duration,
+          opacity: flake.opacity,
+        }}
+      ></div>
+      
       ))}
     </div>
   );

@@ -2,7 +2,7 @@ import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-background py-6">
+    <footer className="py-6">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-gray-700 mb-4 text-lg font-medium">Let's Connect!</p>
         <div className="flex justify-center gap-6">

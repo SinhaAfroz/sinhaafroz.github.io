@@ -15,12 +15,9 @@ const Hero = () => {
           <p className="text-xl text-gray-700 mt-4">
             PhD Aspirant | Software Engineer | Researcher
           </p>
-          {/* <p className="text-lg text-gray-600 mt-2 leading-relaxed">
-            Bridging AI, Bioinformatics & Extended Reality to reshape immersive research frontiers.
-          </p> */}
-
+        
           {/* Personal Introduction */}
-          <p className="text-md text-gray-600 mt-6">
+          <p className="text-md text-gray-600 mt-6 text-justify">
             Hello, I am Sinha Afroz, born and raised in Dhaka, Bangladesh. I graduated in Computer Science and Engineering from United International University with a strong academic record. After completing my studies, I gained hands-on industry experience as a Software Engineer, where I worked on various projects involving software development, system design, and data handling. My passion for technology drives me to continue learning and applying my skills in innovative ways.
           </p>
 
