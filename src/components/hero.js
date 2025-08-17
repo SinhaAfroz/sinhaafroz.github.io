@@ -13,18 +13,43 @@ const Hero = () => {
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-5xl font-extrabold text-gray-900">Sinha Afroz</h1>
           <p className="text-xl text-gray-700 mt-4">
-            PhD Aspirant | Software Engineer | Researcher
+            PhD Student | Software Engineer | Researcher
           </p>
         
           {/* Personal Introduction */}
           <p className="text-md text-gray-600 mt-6 text-justify">
-            Hello, I am Sinha Afroz, born and raised in Dhaka, Bangladesh. I graduated in Computer Science and Engineering from United International University with a strong academic record. After completing my studies, I gained hands-on industry experience as a Software Engineer, where I worked on various projects involving software development, system design, and data handling. My passion for technology drives me to continue learning and applying my skills in innovative ways.
+            Hello, I am Sinha Afroz, born and raised in Dhaka, Bangladesh. 
+            I graduated in Computer Science and Engineering from{" "}
+            <a 
+              href="https://www.uiu.ac.bd" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              United International University
+            </a>{" "}
+            with a strong academic record. After completing my studies, I worked as a Software Engineer, 
+            gaining hands-on experience in software development, system design, and data handling. 
           </p>
+          <p className="text-md text-gray-600 mt-6 text-justify">
+            Starting Fall 2025, I will begin my PhD in Computer Science at{" "}
+            <a 
+              href="https://www.kennesaw.edu" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              Kennesaw State University
+            </a>
+            , with a research focus on immersive technologies and extended reality (XR) development, 
+            where I aim to advance interactive systems and contribute to innovative solutions in this field.
+          </p>
+
 
           <h1 className="text-4xl font-bold text-primary pt-12">
             <Typewriter
               words={[
-                "ML Enthusiast",
+                "XR Enthusiast",
                 "Immersive Tech Explorer",
                 "Aspiring Researcher"
               ]}
