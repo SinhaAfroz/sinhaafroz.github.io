@@ -81,8 +81,6 @@ const About = () => {
               Email
             </a>
           </div>
-          
-          <Footer/>
         </div>
       </div>
     </section>
