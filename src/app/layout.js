@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar"; // relative path
+import Navbar from "../components/navbar";
+import Footer from "../components/footer"; // relative path
 import Script from "next/script"; // Import Script for Google Analytics
 import Head from "next/head"; // Import Head for adding Google Analytics
 import { ThemeProvider } from "../context/ThemeContext";
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
       <ThemeProvider>
           <Navbar />
           <main>{children}</main>
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>

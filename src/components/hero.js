@@ -11,47 +11,47 @@ const Hero = () => {
 
         {/* Left: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-5xl font-extrabold text-gray-900">Sinha Afroz</h1>
+          {/* <h1 className="text-5xl font-extrabold text-gray-900">Sinha Afroz</h1> */}
           <p className="text-xl text-gray-700 mt-4">
-            PhD Student | Software Engineer | Researcher
+            Ph.D. Student | Graduate Research Assistant | Software Engineer | XR/VR Researcher
           </p>
-        
+
           {/* Personal Introduction */}
           <p className="text-md text-gray-600 mt-6 text-justify">
-            Hello, I am Sinha Afroz, born and raised in Dhaka, Bangladesh. 
+            Hello, I am Sinha Afroz, born and raised in Dhaka, Bangladesh.
             I graduated in Computer Science and Engineering from{" "}
-            <a 
-              href="https://www.uiu.ac.bd" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.uiu.ac.bd"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               United International University
             </a>{" "}
-            with a strong academic record. After completing my studies, I worked as a Software Engineer, 
-            gaining hands-on experience in software development, system design, and data handling. 
+            with a strong academic record. After completing my studies, I worked as a Software Engineer,
+            gaining hands-on experience in software development, system design, and data handling.
           </p>
           <p className="text-md text-gray-600 mt-6 text-justify">
-            Starting Fall 2025, I will begin my PhD in Computer Science at{" "}
-            <a 
-              href="https://www.kennesaw.edu" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            I am currently a Ph.D. student in Computer Science at{" "}
+            <a
+              href="https://www.kennesaw.edu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               Kennesaw State University
             </a>
-            , with a research focus on immersive technologies and extended reality (XR) development, 
-            where I aim to advance interactive systems and contribute to innovative solutions in this field.
+            .
+            My research focuses on <span className="font-extrabold">Extended Reality (XR)</span> and <span className="font-extrabold">Virtual Reality (VR)</span> applications in healthcare, with the goal of designing immersive, human-centered technologies.
           </p>
 
 
           <h1 className="text-4xl font-bold text-primary pt-12">
             <Typewriter
               words={[
-                "XR Enthusiast",
+                "XR / VR Enthusiast",
                 "Immersive Tech Explorer",
-                "Aspiring Researcher"
+                "Healthcare XR Developer"
               ]}
               loop={true}
               cursor

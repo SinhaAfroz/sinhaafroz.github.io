@@ -7,28 +7,51 @@ const About = () => {
   return (
     <section className="container bg-white min-h-screen flex items-center justify-center py-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-        
+
         {/* Left: About Text */}
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold text-secondary">
-            <Typewriter words={["Sinha Afroz", "ML Enthusiast", "Software Engineer", "Aspiring Researcher"]} loop={true} cursor />
+            <Typewriter
+              words={[
+                "Ph.D. Student",
+                "Graduate Research Assistant",
+                "ML & XR Enthusiast"
+              ]}
+              loop={true}
+              cursor
+            />
           </h1>
 
           <p className="text-xl text-gray-700 mt-2 font-semibold">
-            Graduate in Computer Science and Engineering | ML Enthusiast | Full-Stack Developer | Aspiring Researcher
+            Graduate in Computer Science and Engineering | Full-Stack Developer | Aspiring Researcher
           </p>
-
           <h2 className="text-3xl font-bold text-secondary mt-6">About Me</h2>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed text-justify">
-            I’m Sinha Afroz, a passionate <span className="font-extrabold">computer science graduate</span> dedicated to developing innovative software solutions that solve <span className="font-extrabold">real-world challenges</span>. 
-            My expertise lies in <span className="font-extrabold">building efficient and scalable systems</span> while focusing on <span className="font-extrabold">enhancing user experience</span>. 
-            Beyond software development, I have a strong inclination toward <span className="font-extrabold">research</span> and aspire to contribute to advancements.
+            I am a <span className="font-extrabold">Computer Science Ph.D. student</span> and Graduate Research Assistant at{' '}
+            <a
+              href="https://www.kennesaw.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Kennesaw State University
+            </a>
+            , working under <span className="font-extrabold">Dr. Lei Zhang</span> at the <span className="font-extrabold">DreamSpace Lab</span>. My research focuses on <span className="font-extrabold">Extended Reality (XR)</span> with applications in the healthcare sector.
+            My goal is to design innovative, human-centered technologies that enhance healthcare experiences, improve accessibility, and support real-world clinical solutions.
           </p>
 
+          <h2 className="text-3xl font-bold text-secondary mt-6">Research & Publications</h2>
+          <ul className="mt-3 space-y-2 text-lg text-gray-700 list-disc list-inside">
+            <li><span className="font-extrabold">Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation</span> – Accepted for <span className="font-extrabold">IEEE VR 2026</span> proceedings and on track for publication in the IEEE Digital Library.</li>
+            <li><span className="font-extrabold">Real-Time Face Recognition with Mask using Deep Convolutional Neural Network</span> – Published in <span className="font-extrabold">CNIOT ’23</span> (Xiamen, China, 2023).</li>
+          </ul>
+
+
+          {/* Keep the rest of your original content as-is */}
           <h2 className="text-3xl font-bold text-secondary mt-6">Professional Summary</h2>
           <p className="text-lg text-gray-700 mt-4 leading-relaxed text-justify">
-            I’m a highly motivated <span className="font-extrabold">Junior Software Engineer</span> with a passion for solving complex real-world problems using cutting-edge technology. 
-            During my time at <span className="font-extrabold">Dhaka Popular Travel Ltd.</span>, I worked on optimizing the airline ticket purchasing system. 
+            I’m a highly motivated <span className="font-extrabold">Junior Software Engineer</span> with a passion for solving complex real-world problems using cutting-edge technology.
+            During my time at <span className="font-extrabold">Dhaka Popular Travel Ltd.</span>, I worked on optimizing the airline ticket purchasing system.
             My expertise includes frontend development, backend development, and system integration, with a strong foundation in <span className="font-extrabold">Python</span>, <span className="font-extrabold">Vue.js</span>, <span className="font-extrabold">Laravel</span>, and <span className="font-extrabold">MySQL</span>.
           </p>
 
@@ -63,24 +86,11 @@ const About = () => {
 
           <h2 className="text-3xl font-bold text-secondary mt-6">Areas of Interest</h2>
           <ul className="mt-3 space-y-2 text-lg text-gray-700">
-            <li>🤖 <span className="font-extrabold">Machine Learning</span> & <span className="font-extrabold">AI</span></li>
-            <li>🧬 <span className="font-extrabold">Bioinformatics</span> & <span className="font-extrabold">Computational Biology</span></li>
-            <li>🎭 <span className="font-extrabold">Computer Vision</span> & <span className="font-extrabold">Deep Learning</span></li>
-            <li>🖥️ <span className="font-extrabold">Software Engineering</span> & <span className="font-extrabold">Big Data</span></li>
+            <li>🕶️ <span className="font-extrabold">Virtual Reality (VR)</span> & <span className="font-extrabold">Extended Reality (XR)</span></li>
+            <li>🎭 <span className="font-extrabold">Computer Vision (CV)</span></li>
           </ul>
 
-          {/* Contact Links */}
-          <div className="mt-8 flex justify-center md:justify-start space-x-4">
-            <a href="https://www.linkedin.com/in/sinha-afroz" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
-              LinkedIn
-            </a>
-            <a href="https://github.com/SinhaAfroz" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
-              GitHub
-            </a>
-            <a href="mailto:sinhaafroz16@gmail.com" className="bg-gradient-to-r from-primary via-accent to-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
-              Email
-            </a>
-          </div>
+         
         </div>
       </div>
     </section>

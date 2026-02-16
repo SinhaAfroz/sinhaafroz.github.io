@@ -12,7 +12,14 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <>
+    <div>
+      {pathname !== "/" && (
+        <div className="fixed top-8 right-4 z-50">
+          <a className="text-xl font-extrabold text-gray-900" href="/">Sinha Afroz</a>
+        </div>
+      )}
+
+
       {/* Menu Toggle Button */}
       <button
         onClick={toggleMenu}
@@ -26,16 +33,17 @@ const Navbar = () => {
         className={`fixed top-0 left-0 h-full w-16 z-40 flex flex-col items-center pt-20 pl-4 space-y-6
         transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
+
         <SidebarLink href="/" icon={<AiOutlineHome />} active={pathname === "/"} toggleMenu={toggleMenu} />
         <SidebarLink href="/about" icon={<AiOutlineUser />} active={pathname === "/about"} toggleMenu={toggleMenu} />
         <SidebarLink href="/projects" icon={<AiOutlineProject />} active={pathname === "/projects"} toggleMenu={toggleMenu} />
-        <SidebarLink href="/contact" icon={<AiOutlineMail />} active={pathname === "/contact"} toggleMenu={toggleMenu} />
+        {/* <SidebarLink href="/contact" icon={<AiOutlineMail />} active={pathname === "/contact"} toggleMenu={toggleMenu} /> */}
       </div>
-    </>
+    </div>
   );
 };
 
-// 💅 Reusable Link Component
+// Reusable Link Component
 const SidebarLink = ({ href, icon, active, toggleMenu }) => {
   return (
     <Link

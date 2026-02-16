@@ -8,13 +8,13 @@ const personalProjects = [
     description: "For my final year project, I developed an advanced face recognition system capable of identifying individuals both with and without face masks. Using a convolutional neural network (CNN) in Python, I integrated the solution into a compact hardware model to demonstrate its real-world application. This system helps improve security in crowded places and during health crises, like the pandemic.",
     tech: ["Python", "Deep Learning", "CNN"],
     publication: "https://doi.org/10.1145/3603781.3603863",
-    demo: "https://youtu.be/ppKqjw5Q08A",
+    demo: "https://www.youtube.com/embed/ppKqjw5Q08A?autoplay=0&controls=1",
   },
   {
     title: "Water Cleaning Boat",
     description: "This award-winning project from our university's 'CSE Project Show - Spring 19' involved designing an autonomous boat to clean polluted surface water. With the use of a Raspberry Pi and Arduino Uno, the boat could navigate autonomously and gather water pollutants. This project emphasized environmental sustainability and IoT-based solutions for real-world water quality problems.",
     tech: ["Raspberry Pi", "Arduino Uno"],
-    demo: "https://drive.google.com/file/d/1lFAGXMjOSxJZxOj1la_DgTmuPDsWb1J3/view",
+    demo: "https://drive.google.com/file/d/1lFAGXMjOSxJZxOj1la_DgTmuPDsWb1J3/preview",
   },
   {
     title: "Identification of DNA-Binding Proteins",
@@ -59,7 +59,7 @@ const professionalProjects = [
 
 const Projects = () => {
   return (
-    <section className="bg-background min-h-screen py-12 px-6 flex flex-col items-center">
+    <section className="container bg-background min-h-screen py-12 px-6 flex flex-col items-center">
       <h1 className="text-4xl font-bold text-text mb-10">Projects</h1>
       <div className="max-w-5xl w-full space-y-16">
 
@@ -78,12 +78,26 @@ const Projects = () => {
                 <h3 className="text-2xl font-bold">{project.title}</h3>
                 <p className="mt-1">{project.description}</p>
                 <p className="mt-1 italic text-sm">Technologies: {project.tech.join(", ")}</p>
+
+                {/* Video Frame */}
+                {project.demo && (
+                  <div className="mt-4">
+                    <iframe
+                      width="100%"
+                      height="300"
+                      src={project.demo}
+                      title={project.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg shadow-md"
+                    ></iframe>
+                  </div>
+                )}
+
                 <div className="flex gap-4 mt-2 text-sm">
                   {project.publication && (
                     <a href={project.publication} target="_blank" className="text-primary underline">Publication</a>
-                  )}
-                  {project.demo && (
-                    <a href={project.demo} target="_blank" className="text-accent underline">Demo</a>
                   )}
                   {project.github && (
                     <a href={project.github} target="_blank" className="text-secondary underline">GitHub</a>
