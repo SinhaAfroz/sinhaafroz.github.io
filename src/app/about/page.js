@@ -1,97 +1,178 @@
 "use client";
 
-import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
   return (
-    <section className="container bg-white min-h-screen flex items-center justify-center py-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
+    <section className="bg-white min-h-screen py-20 px-6">
+      <div className="max-w-4xl mx-auto">
 
-        {/* Left: About Text */}
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl font-bold text-secondary">
+        {/* Header */}
+        <div className="mb-10">
+          <h1 className="text-5xl font-extrabold text-gray-900">Sinha Afroz</h1>
+          <p className="text-xl text-gray-500 mt-2">
+            Ph.D. Student in Computer Science &middot; Graduate Research Assistant &middot; DreamSpace Lab, KSU
+          </p>
+          <div className="text-2xl font-bold text-secondary mt-3">
             <Typewriter
               words={[
-                "Ph.D. Student",
-                "Graduate Research Assistant",
-                "ML & XR Enthusiast"
+                "XR / VR Researcher",
+                "Healthcare Immersive Tech",
+                "HCI Researcher",
+                "PhD Researcher"
               ]}
               loop={true}
               cursor
             />
-          </h1>
-
-          <p className="text-xl text-gray-700 mt-2 font-semibold">
-            Graduate in Computer Science and Engineering | Full-Stack Developer | Aspiring Researcher
-          </p>
-          <h2 className="text-3xl font-bold text-secondary mt-6">About Me</h2>
-          <p className="text-lg text-gray-700 mt-4 leading-relaxed text-justify">
-            I am a <span className="font-extrabold">Computer Science Ph.D. student</span> and Graduate Research Assistant at{' '}
-            <a
-              href="https://www.kennesaw.edu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              Kennesaw State University
-            </a>
-            , working under <span className="font-extrabold">Dr. Lei Zhang</span> at the <span className="font-extrabold">DreamSpace Lab</span>. My research focuses on <span className="font-extrabold">Extended Reality (XR)</span> with applications in the healthcare sector.
-            My goal is to design innovative, human-centered technologies that enhance healthcare experiences, improve accessibility, and support real-world clinical solutions.
-          </p>
-
-          <h2 className="text-3xl font-bold text-secondary mt-6">Research & Publications</h2>
-          <ul className="mt-3 space-y-2 text-lg text-gray-700 list-disc list-inside">
-            <li><span className="font-extrabold">Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation</span> – Accepted for <span className="font-extrabold">IEEE VR 2026</span> proceedings and on track for publication in the IEEE Digital Library.</li>
-            <li><span className="font-extrabold">Real-Time Face Recognition with Mask using Deep Convolutional Neural Network</span> – Published in <span className="font-extrabold">CNIOT ’23</span> (Xiamen, China, 2023).</li>
-          </ul>
-
-
-          {/* Keep the rest of your original content as-is */}
-          <h2 className="text-3xl font-bold text-secondary mt-6">Professional Summary</h2>
-          <p className="text-lg text-gray-700 mt-4 leading-relaxed text-justify">
-            I’m a highly motivated <span className="font-extrabold">Junior Software Engineer</span> with a passion for solving complex real-world problems using cutting-edge technology.
-            During my time at <span className="font-extrabold">Dhaka Popular Travel Ltd.</span>, I worked on optimizing the airline ticket purchasing system.
-            My expertise includes frontend development, backend development, and system integration, with a strong foundation in <span className="font-extrabold">Python</span>, <span className="font-extrabold">Vue.js</span>, <span className="font-extrabold">Laravel</span>, and <span className="font-extrabold">MySQL</span>.
-          </p>
-
-          {/* Key Highlights */}
-          <div className="mt-6">
-            <h3 className="text-2xl font-semibold text-gray-800">Key Highlights</h3>
-            <ul className="mt-3 space-y-2 text-lg text-gray-700">
-              <li>🚀 Designed front-end interfaces using <span className="font-extrabold">HTML</span>, <span className="font-extrabold">Tailwind CSS</span>, and <span className="font-extrabold">Vue.js</span> based on Figma designs to improve website visuals.</li>
-              <li>🔗 Developed <span className="font-extrabold">RESTful APIs</span> using <span className="font-extrabold">Laravel</span> and handled database management with <span className="font-extrabold">MySQL</span>.</li>
-              <li>📊 Automated <span className="font-extrabold">data extraction</span> processes using <span className="font-extrabold">Python</span> scripts to gather airline information (logos, codes, etc.).</li>
-              <li>🛠️ Tested <span className="font-extrabold">RESTful APIs</span> using <span className="font-extrabold">Postman</span> to ensure proper functionality and performance.</li>
-              <li>✈️ Worked with my created <span className="font-extrabold">Kaggle dataset</span> on Airport and Airlines, containing IATA codes, airline logos, and relevant data such as airport names, airline names, and ICAO codes.</li>
-              <li>🖥️ Deployed and integrated systems with <span className="font-extrabold">Docker</span> and <span className="font-extrabold">Linux</span> to ensure smooth operations.</li>
-              <li>📚 Gained valuable insights into <span className="font-extrabold">Amadeus APIs</span>, familiarizing myself with key airline industry terminology, including PNR and alpha-numeric codes.</li>
-            </ul>
           </div>
-
-          <h2 className="text-3xl font-bold text-secondary mt-6">Academic Background</h2>
-          <ul className="mt-3 space-y-2 text-lg text-gray-700">
-            <li>🎓 <span className="font-extrabold">B.Sc. in CSE</span> - United International University (UIU) | Graduated in 2024 with <span className="font-extrabold">Magna Cum Laude</span> honors, consistently earning scholarships throughout my university years due to academic excellence.</li>
-            <li>📚 <span className="font-extrabold">HSC</span> - Dhaka City College | Graduated in 2016</li>
-            <li>🏆 <span className="font-extrabold">SSC</span> - Dhanmondi Govt. Girls High School | Graduated in 2014 | Attended <span className="font-extrabold">Bangladesh Math Olympiad</span> in 2012, showcasing strong problem-solving skills.</li>
-          </ul>
-
-          <h2 className="text-3xl font-bold text-secondary mt-6">Achievements & Recognition</h2>
-          <ul className="mt-3 space-y-2 text-lg text-gray-700">
-            <li>🖥️ <span className="font-extrabold">Real-Time Face Recognition with Mask</span> - Developed a Deep Convolutional Neural Network (CNN)-based real-time face recognition system capable of identifying individuals wearing masks. Published in <span className="font-extrabold">CNIOT'23</span> (Xiamen, China, 2023).</li>
-            <li>🚢 <span className="font-extrabold">Water Cleaning Boat - Simsibin</span> - Designed an innovative water-cleaning boat to address environmental concerns. Won 1st place at UIU CSE Project Show (Spring 2019).</li>
-            <li>🎖️ Earned multiple scholarships and <span className="font-extrabold">Magna Cum Laude</span> distinction at the 2024 convocation.</li>
-            <li>🔬 Awarded complimentary <span className="font-extrabold">ACM Membership</span> (Aug 2023–Sep 2024) due to publication at CNIOT'23.</li>
-          </ul>
-
-          <h2 className="text-3xl font-bold text-secondary mt-6">Areas of Interest</h2>
-          <ul className="mt-3 space-y-2 text-lg text-gray-700">
-            <li>🕶️ <span className="font-extrabold">Virtual Reality (VR)</span> & <span className="font-extrabold">Extended Reality (XR)</span></li>
-            <li>🎭 <span className="font-extrabold">Computer Vision (CV)</span></li>
-          </ul>
-
-         
         </div>
+
+        <hr className="border-gray-200 mb-10" />
+
+        {/* About */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">About</h2>
+          <p className="text-gray-700 leading-relaxed text-justify">
+            I am a Ph.D. student in Computer Science at{" "}
+            <a href="https://www.kennesaw.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Kennesaw State University</a>
+            , advised by <span className="font-semibold">Dr. Lei Zhang</span> at the{" "}
+            <span className="font-semibold">DreamSpace Lab</span>. My research focuses on{" "}
+            <span className="font-semibold">Extended Reality (XR)</span> and{" "}
+            <span className="font-semibold">Virtual Reality (VR)</span> applications in healthcare — designing
+            immersive, human-centered technologies that improve accessibility and support real-world clinical solutions.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-justify mt-4">
+            I completed my B.Sc. in Computer Science and Engineering from{" "}
+            <a href="https://www.uiu.ac.bd" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              United International University
+            </a>{" "}
+            in 2024 with <span className="font-semibold">Magna Cum Laude</span> honors. Prior to my PhD, I worked as a Software Engineer at{" "}
+            <span className="font-semibold">Dhaka Popular Travel Ltd.</span>, building full-stack systems for B2B airline ticketing.
+          </p>
+        </div>
+
+        {/* Research & Publications */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Research &amp; Publications</h2>
+          <div className="space-y-4">
+            <div className="border-l-4 border-secondary pl-4">
+              <p className="font-semibold text-gray-800">
+                Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                <strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">Frontiers in Virtual Reality</span> &mdash; Accepted. &nbsp;
+                <a href="https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Frontiers</a>
+              </p>
+            </div>
+            <div className="border-l-4 border-secondary pl-4">
+              <p className="font-semibold text-gray-800">
+                Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                <strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">IEEE VR 2026</span> &mdash; Published. &nbsp;
+                <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">IEEE Xplore</a> &nbsp;
+                <a href="https://par.nsf.gov/servlets/purl/10686348" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF</a>
+              </p>
+            </div>
+            <div className="border-l-4 border-secondary pl-4">
+              <p className="font-semibold text-gray-800">
+                Real-Time Face Recognition with Mask using Deep Convolutional Neural Network
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                Md. Ashif Mahmud Joy, Md. Fuad Hasan Khan Chowdhury, <strong>Sinha Afroz</strong>, Md. Nurul Islam, Ruaida Muhsinat, Mukta Akanda Moly, Dewan Md. Farid &mdash; <span className="font-medium text-secondary">CNIOT &apos;23</span>, Xiamen, China, 2023. &nbsp;
+                <a href="https://doi.org/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">DOI</a> &nbsp;
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Areas of Interest */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Research Interests</h2>
+          <div className="flex flex-wrap gap-3">
+            {[
+              "Extended Reality (XR)",
+              "Virtual Reality (VR)",
+              "Human-Computer Interaction (HCI)",
+              "Medical Imaging Visualization",
+              "Computer Vision",
+              "Immersive Systems",
+            ].map((tag) => (
+              <span key={tag} className="bg-purple-50 text-secondary border border-secondary px-4 py-1 rounded-full text-sm font-medium">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Education */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Education</h2>
+          <div className="space-y-4">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800">Ph.D. in Computer Science</p>
+                <p className="text-gray-500 text-sm">Kennesaw State University &mdash; DreamSpace Lab, advised by Dr. Lei Zhang</p>
+              </div>
+              <span className="text-sm text-gray-400 whitespace-nowrap">2024 &ndash; Present</span>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800">B.Sc. in Computer Science &amp; Engineering</p>
+                <p className="text-gray-500 text-sm">United International University &mdash; Graduated <span className="font-medium">Magna Cum Laude</span></p>
+              </div>
+              <span className="text-sm text-gray-400 whitespace-nowrap">2024</span>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800">HSC</p>
+                <p className="text-gray-500 text-sm">Dhaka City College</p>
+              </div>
+              <span className="text-sm text-gray-400 whitespace-nowrap">2016</span>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800">SSC</p>
+                <p className="text-gray-500 text-sm">Dhanmondi Govt. Girls High School &mdash; Bangladesh Math Olympiad participant (2012)</p>
+              </div>
+              <span className="text-sm text-gray-400 whitespace-nowrap">2014</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Industry Experience */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Industry Experience</h2>
+          <div className="flex justify-between items-start">
+            <div>
+              <p className="font-semibold text-gray-800">Software Engineer</p>
+              <p className="text-gray-500 text-sm">Dhaka Popular Travel Ltd.</p>
+              <ul className="mt-2 space-y-1 text-sm text-gray-600 list-disc list-inside">
+                <li>Built B2B airline ticketing frontend with <span className="font-medium">Vue.js</span> and <span className="font-medium">Tailwind CSS</span>.</li>
+                <li>Developed RESTful APIs using <span className="font-medium">Laravel</span> and managed <span className="font-medium">MySQL</span> databases.</li>
+                <li>Automated airline data extraction (logos, IATA/ICAO codes) using <span className="font-medium">Python</span>.</li>
+                <li>Deployed and integrated systems with <span className="font-medium">Docker</span> on <span className="font-medium">Linux</span>.</li>
+                <li>Published an Airport &amp; Airlines <span className="font-medium">Kaggle dataset</span> from this work.</li>
+              </ul>
+            </div>
+            <span className="text-sm text-gray-400 whitespace-nowrap ml-6">2023 &ndash; 2024</span>
+          </div>
+        </div>
+
+        {/* Achievements */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Achievements &amp; Recognition</h2>
+          <ul className="space-y-2 text-gray-700 text-sm list-disc list-inside">
+            <li>Paper accepted in <span className="font-semibold">Frontiers in Virtual Reality</span> (April 2025) — scoping review of XR in oncology.</li>
+            <li>Published at <span className="font-semibold">IEEE VR 2026</span> — multi-user VR system for medical imaging presentation. <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">IEEE Xplore</a></li>
+            <li>Published at <span className="font-semibold">CNIOT &apos;23</span> (ACM); awarded complimentary ACM Membership (Aug 2023 – Sep 2024).</li>
+            <li>Graduated with <span className="font-semibold">Magna Cum Laude</span> honors at UIU 2024 convocation; earned merit scholarships throughout.</li>
+            <li><span className="font-semibold">1st Place</span> — UIU CSE Project Show (Spring 2019) for Water Cleaning Boat "Simsibin".</li>
+            <li>Bangladesh Math Olympiad participant (2012).</li>
+          </ul>
+        </div>
+
       </div>
     </section>
   );

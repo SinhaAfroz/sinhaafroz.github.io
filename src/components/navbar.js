@@ -2,58 +2,73 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FiMenu } from "react-icons/fi";
-import { AiOutlineHome, AiOutlineUser, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/publications", label: "Publications" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      {pathname !== "/" && (
-        <div className="fixed top-8 right-4 z-50">
-          <a className="text-xl font-extrabold text-gray-900" href="/">Sinha Afroz</a>
-        </div>
-      )}
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-violet-700 via-purple-600 to-pink-500 shadow-md">
+      <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+        <Link href="/" className="text-lg font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
+          Sinha Afroz
+        </Link>
 
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`text-sm font-medium transition-all duration-200 ${
+                pathname === href
+                  ? "text-white border-b-2 border-white pb-0.5"
+                  : "text-purple-100 hover:text-white"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
 
-      {/* Menu Toggle Button */}
-      <button
-        onClick={toggleMenu}
-        className="fixed top-4 left-4 z-50 text-white bg-navbar p-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
-      >
-        <FiMenu size={24} />
-      </button>
-
-      {/* Animated Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-16 z-40 flex flex-col items-center pt-20 pl-4 space-y-6
-        transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-      >
-
-        <SidebarLink href="/" icon={<AiOutlineHome />} active={pathname === "/"} toggleMenu={toggleMenu} />
-        <SidebarLink href="/about" icon={<AiOutlineUser />} active={pathname === "/about"} toggleMenu={toggleMenu} />
-        <SidebarLink href="/projects" icon={<AiOutlineProject />} active={pathname === "/projects"} toggleMenu={toggleMenu} />
-        {/* <SidebarLink href="/contact" icon={<AiOutlineMail />} active={pathname === "/contact"} toggleMenu={toggleMenu} /> */}
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden text-white hover:opacity-80"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+        </button>
       </div>
-    </div>
-  );
-};
 
-// Reusable Link Component
-const SidebarLink = ({ href, icon, active, toggleMenu }) => {
-  return (
-    <Link
-      href={href}
-      onClick={toggleMenu}
-      className={`flex items-center justify-center w-12 h-12 rounded-lg bg-navbar
-      ${active ? "bg-pink-300" : "hover:scale-105 hover:shadow-2xl transition-all duration-300"} transition-colors duration-200`}
-    >
-      <span className="text-white text-2xl">{icon}</span>
-    </Link>
+      {/* Mobile dropdown */}
+      {isOpen && (
+        <nav className="md:hidden bg-purple-700 border-t border-purple-500 px-6 pb-4 flex flex-col gap-4 pt-3">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className={`text-sm font-medium ${
+                pathname === href ? "text-white" : "text-purple-200 hover:text-white"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 };
 

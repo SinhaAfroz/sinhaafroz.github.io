@@ -1,47 +1,27 @@
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-4 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Call to action */}
-        <p className="mb-4 text-lg font-medium text-text">Let's Connect!</p>
+    <footer className="border-t border-gray-200 bg-white py-6 mt-16">
+      <div className="max-w-4xl mx-auto px-6 flex flex-col items-center gap-4">
 
-        {/* Social / contact icons */}
-        <div className="flex justify-center gap-6">
-          <a
-            href="mailto:sinhaafroz16@gmail.com"
-            className="text-primary hover:scale-125 hover:shadow-2xl transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Email"
-          >
-            <FaEnvelope size={28} />
+        <div className="flex gap-5">
+          <a href="mailto:sinhaafroz16@gmail.com" title="Email" className="text-gray-400 hover:text-primary transition">
+            <FaEnvelope size={18} />
           </a>
-          <a
-            href="https://www.linkedin.com/in/sinha-afroz"
-            className="text-primary hover:scale-125 hover:shadow-2xl transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-          >
-            <FaLinkedin size={28} />
+          <a href="https://scholar.google.com/citations?user=LgGoP98AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar" className="text-gray-400 hover:text-primary transition">
+            <FaGraduationCap size={18} />
           </a>
-          <a
-            href="https://github.com/yourusername"
-            className="text-primary hover:scale-125 hover:shadow-2xl transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-          >
-            <FaGithub size={28} />
+          <a href="https://www.linkedin.com/in/sinha-afroz" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="text-gray-400 hover:text-primary transition">
+            <FaLinkedin size={18} />
+          </a>
+          <a href="https://github.com/SinhaAfroz" target="_blank" rel="noopener noreferrer" title="GitHub" className="text-gray-400 hover:text-primary transition">
+            <FaGithub size={18} />
           </a>
         </div>
 
-        {/* Last updated / copyright */}
-        <p className="mt-4 text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Sinha Afroz. Last updated: Feb 2026. All rights reserved.
-        </p>
+        <p className="text-xs text-gray-400" suppressHydrationWarning>&copy; {new Date().getFullYear()} Sinha Afroz</p>
+
       </div>
     </footer>
   );

@@ -1,22 +1,15 @@
 "use client";
-import { useState } from "react";
 import Hero from "@/components/hero";
-import Preloader from "@/components/Preloader";
-import Snowfall from "@/components/snowfall";
+import VRParticles from "@/components/VRparticles";
 
 const HomePage = () => {
-  const [loaded, setLoaded] = useState(false);
-
   return (
-    <>
-      {/* {!loaded && <Preloader onFinish={() => setLoaded(true)} />}
-      {loaded && ( */}
-      <div className="">
-        <Snowfall />
+    <div className="relative">
+      <VRParticles />
+      <div className="relative z-10">
         <Hero />
       </div>
-      {/* )} */}
-    </>
+    </div>
   );
 };
 
