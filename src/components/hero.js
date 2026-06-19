@@ -91,7 +91,7 @@ const Hero = () => {
           {/* Quick links — full width, uniform size */}
           <div className="flex flex-col gap-3 pt-8 w-full">
             <a
-              href="/cv.pdf"
+              href="/CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
