@@ -36,9 +36,43 @@ const Hero = () => {
     <main className="max-w-4xl mx-auto px-6 py-16">
 
       {/* ── Bio block ── */}
-      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-start">
+      <div className="flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-start">
 
-        {/* Left: text */}
+        {/* Top on mobile / Right on desktop: photo + links */}
+        <div className="w-full md:w-48 flex-shrink-0 flex flex-col items-center gap-3">
+          <Image
+            src="/profile2.jpg"
+            alt="Sinha Afroz"
+            width={200}
+            height={200}
+            className="rounded-xl object-cover w-40 md:w-full shadow-md"
+          />
+          {/* Quick links */}
+          <div className="flex flex-row flex-wrap justify-center md:flex-col gap-2 w-full mt-2">
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white text-xs md:text-sm px-3 py-2 rounded-md hover:opacity-90 transition md:w-full">
+              CV / Resume
+            </a>
+            <a href="mailto:sinhaafroz16@gmail.com"
+              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-xs md:text-sm px-3 py-2 rounded-md hover:border-primary hover:text-primary transition md:w-full">
+              <FaEnvelope size={13} /> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=LgGoP98AAAAJ&hl=en" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-xs md:text-sm px-3 py-2 rounded-md hover:border-primary hover:text-primary transition md:w-full">
+              <FaGraduationCap size={13} /> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sinha-afroz" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-xs md:text-sm px-3 py-2 rounded-md hover:border-primary hover:text-primary transition md:w-full">
+              <FaLinkedin size={13} /> LinkedIn
+            </a>
+            <a href="https://github.com/SinhaAfroz" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-xs md:text-sm px-3 py-2 rounded-md hover:border-primary hover:text-primary transition md:w-full">
+              <FaGithub size={13} /> GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Left on desktop: text */}
         <div className="flex-1">
           <h1 className="text-4xl font-bold text-gray-900">Sinha Afroz</h1>
           <p className="mt-2 text-gray-600 text-base leading-relaxed">
@@ -79,58 +113,6 @@ const Hero = () => {
 
         </div>
 
-        {/* Right: photo + links */}
-        <div className="md:w-48 w-32 flex-shrink-0 flex flex-col items-center gap-3">
-          <Image
-            src="/profile2.jpg"
-            alt="Sinha Afroz"
-            width={200}
-            height={200}
-            className="rounded-xl object-cover w-full shadow-md"
-          />
-          {/* Quick links — full width, uniform size */}
-          <div className="flex flex-col gap-3 pt-8 w-full">
-            <a
-              href="/CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
-            >
-              CV / Resume
-            </a>
-            <a
-              href="mailto:sinhaafroz16@gmail.com"
-              className="w-full inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:border-primary hover:text-primary transition"
-            >
-              <FaEnvelope size={14} /> Email
-            </a>
-            <a
-              href="https://scholar.google.com/citations?user=LgGoP98AAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:border-primary hover:text-primary transition"
-            >
-              <FaGraduationCap size={14} /> Google Scholar
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sinha-afroz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:border-primary hover:text-primary transition"
-            >
-              <FaLinkedin size={14} /> LinkedIn
-            </a>
-            <a
-              href="https://github.com/SinhaAfroz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:border-primary hover:text-primary transition"
-            >
-              <FaGithub size={14} /> GitHub
-            </a>
-          </div>
-
-        </div>
       </div>
 
 
