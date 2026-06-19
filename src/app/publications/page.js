@@ -11,7 +11,7 @@ const highlightName = (authors) =>
 
 const publications = [
   {
-    year: "2025",
+    year: "2026",
     title:
       "Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization",
     authors: "Sinha Afroz, Lei Zhang",
@@ -23,7 +23,7 @@ const publications = [
     tags: ["XR", "Oncology", "Scoping Review"],
   },
   {
-    year: "2025",
+    year: "2026",
     title:
       "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation",
     authors: "Sinha Afroz, Lei Zhang",
@@ -69,8 +69,8 @@ const Publications = () => {
               <div className="mt-2 flex flex-wrap items-center gap-3">
                 <span
                   className={`text-xs font-medium px-2 py-0.5 rounded-full ${pub.status === "Published"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-yellow-100 text-yellow-700"
+                    ? "bg-green-100 text-green-700"
+                    : "bg-yellow-100 text-yellow-700"
                     }`}
                 >
                   {pub.status}
