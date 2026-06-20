@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -41,14 +42,17 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-white hover:opacity-80"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          {/* Mobile menu toggle */}
+          <button
+            className="md:hidden text-white hover:opacity-80"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}

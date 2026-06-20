@@ -1,48 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useTheme } from "../context/ThemeContext";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const ThemeToggle = () => {
-  // State to store the current theme
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    // Function to get the current hour of the day
-    const currentHour = new Date().getHours();
-
-    // Automatically set the theme based on the time of the day
-    if (currentHour >= 19 || currentHour <= 6) {
-      setTheme("dark"); // Night time (7 PM to 6 AM)
-    } else {
-      setTheme("light"); // Day time (7 AM to 6 PM)
-    }
-
-    // Check for user's system preference for color scheme
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (prefersDarkMode) {
-      setTheme("dark"); // Default to dark mode if user's system preference is dark
-    }
-  }, []);
-
-  // Toggle function to manually change theme
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-  };
-
-  // Apply the theme to the document
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="fixed top-4 right-4 z-50">
-      <button
-        onClick={toggleTheme}
-        className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-200"
-      >
-        {theme === "dark" ? "🌙 Dark Mode" : "🌞 Light Mode"}
-      </button>
-    </div>
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle day/night mode"
+      className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors text-sm px-2 py-1 rounded-md hover:bg-white/10"
+    >
+      {theme === "dark" ? (
+        <>
+          <FiSun size={15} />
+          <span className="hidden sm:inline">Day</span>
+        </>
+      ) : (
+        <>
+          <FiMoon size={15} />
+          <span className="hidden sm:inline">Night</span>
+        </>
+      )}
+    </button>
   );
 };
 

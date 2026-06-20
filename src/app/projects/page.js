@@ -59,27 +59,25 @@ const professionalProjects = [
 
 const Projects = () => {
   return (
-    <section className="container bg-background min-h-screen py-12 px-6 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-text mb-10">Projects</h1>
+    <section className="bg-white dark:bg-gray-950 min-h-screen py-12 px-6 flex flex-col items-center transition-colors duration-300">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-10">Projects</h1>
       <div className="max-w-5xl w-full space-y-16">
 
-        {/* PERSONAL PROJECTS */}
         <div>
-          <h2 className="text-3xl font-semibold text-text mb-6">Personal Projects</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-6">Personal Projects</h2>
           <ul className="space-y-8">
             {personalProjects.map((project, index) => (
               <motion.li
                 key={index}
-                className="text-text bg-white p-6 rounded-lg shadow-lg text-justify"
+                className="text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 rounded-lg shadow-lg text-justify"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 * index }}
               >
-                <h3 className="text-2xl font-bold">{project.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
                 <p className="mt-1">{project.description}</p>
-                <p className="mt-1 italic text-sm">Technologies: {project.tech.join(", ")}</p>
+                <p className="mt-1 italic text-sm text-gray-500 dark:text-gray-400">Technologies: {project.tech.join(", ")}</p>
 
-                {/* Video Frame */}
                 {project.demo && (
                   <div className="mt-4">
                     <iframe
@@ -91,7 +89,7 @@ const Projects = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="rounded-lg shadow-md"
-                    ></iframe>
+                    />
                   </div>
                 )}
 
@@ -108,21 +106,20 @@ const Projects = () => {
           </ul>
         </div>
 
-        {/* PROFESSIONAL PROJECTS */}
         <div>
-          <h2 className="text-3xl font-semibold text-text mb-6">Professional Projects</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-6">Professional Projects</h2>
           <ul className="space-y-8">
             {professionalProjects.map((project, index) => (
               <motion.li
                 key={index}
-                className="text-text bg-white p-6 rounded-lg shadow-lg text-justify"
+                className="text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-6 rounded-lg shadow-lg text-justify"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 * index }}
               >
-                <h3 className="text-2xl font-bold">{project.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
                 <p className="mt-1">{project.description}</p>
-                <p className="mt-1 italic text-sm">Technologies: {project.tech.join(", ")}</p>
+                <p className="mt-1 italic text-sm text-gray-500 dark:text-gray-400">Technologies: {project.tech.join(", ")}</p>
                 <div className="flex gap-4 mt-2 text-sm">
                   <a href={project.link} target="_blank" className="text-primary underline">View Project</a>
                 </div>

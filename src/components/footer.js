@@ -2,7 +2,7 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 bg-white py-6 mt-16">
+    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 py-6 mt-16 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center gap-4">
 
         <div className="flex gap-5">
