@@ -18,7 +18,7 @@ const newsItems = [
     text: 'Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal VR System for Medical Imaging Presentation".',
   },
   {
-    date: "Aug 2024",
+    date: "Aug 2025",
     text: "Started Ph.D. at Kennesaw State University; joined the DreamSpace Lab as a Graduate Research Assistant.",
   },
   {

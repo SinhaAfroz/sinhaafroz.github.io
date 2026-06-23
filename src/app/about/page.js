@@ -39,7 +39,7 @@ const About = () => {
             <a href="https://www.uiu.ac.bd" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
               United International University
             </a>{" "}
-            in 2024 with <span className="font-semibold">Magna Cum Laude</span> honors. Prior to my PhD, I worked as a Software Engineer at{" "}
+            in 2022 with <span className="font-semibold">Magna Cum Laude</span> honors. Prior to my PhD, I worked as a Software Engineer at{" "}
             <span className="font-semibold">Dhaka Popular Travel Ltd.</span>, building full-stack systems for B2B airline ticketing.
           </p>
         </div>
@@ -84,8 +84,8 @@ const About = () => {
           <h2 className="text-2xl font-bold text-secondary mb-3">Education</h2>
           <div className="space-y-4">
             {[
-              { degree: "Ph.D. in Computer Science", detail: "Kennesaw State University — DreamSpace Lab, advised by Dr. Lei Zhang", year: "2024 – Present" },
-              { degree: "B.Sc. in Computer Science & Engineering", detail: "United International University — Graduated Magna Cum Laude", year: "2024" },
+              { degree: "Ph.D. in Computer Science", detail: "Kennesaw State University — DreamSpace Lab, advised by Dr. Lei Zhang", year: "2025 – Present" },
+              { degree: "B.Sc. in Computer Science & Engineering", detail: "United International University — Graduated Magna Cum Laude", year: "2022" },
               { degree: "HSC", detail: "Dhaka City College", year: "2016" },
               { degree: "SSC", detail: "Dhanmondi Govt. Girls High School — Bangladesh Math Olympiad participant (2012)", year: "2014" },
             ].map((e, i) => (
@@ -114,7 +114,7 @@ const About = () => {
                 <li>Published an Airport &amp; Airlines <span className="font-medium">Kaggle dataset</span> from this work.</li>
               </ul>
             </div>
-            <span className="text-sm text-gray-400 dark:text-gray-500 whitespace-nowrap ml-6">2023 – 2024</span>
+            <span className="text-sm text-gray-400 dark:text-gray-500 whitespace-nowrap ml-6">Jan 2023 – Dec 2023</span>
           </div>
         </div>
 
@@ -124,7 +124,7 @@ const About = () => {
             <li>Paper accepted in <span className="font-semibold">Frontiers in Virtual Reality</span> (April 2025) — scoping review of XR in oncology.</li>
             <li>Published at <span className="font-semibold">IEEE VR 2026</span> — multi-user VR system for medical imaging presentation. <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">IEEE Xplore</a></li>
             <li>Published at <span className="font-semibold">CNIOT &apos;23</span> (ACM); awarded complimentary ACM Membership (Aug 2023 – Sep 2024).</li>
-            <li>Graduated with <span className="font-semibold">Magna Cum Laude</span> honors at UIU 2024 convocation; earned merit scholarships throughout.</li>
+            <li>Graduated with <span className="font-semibold">Magna Cum Laude</span> honors at UIU 2022 convocation; earned merit scholarships throughout.</li>
             <li><span className="font-semibold">1st Place</span> — UIU CSE Project Show (Spring 2019) for Water Cleaning Boat "Simsibin".</li>
             <li>Bangladesh Math Olympiad participant (2012).</li>
           </ul>
