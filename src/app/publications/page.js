@@ -15,7 +15,8 @@ const publications = [
     title: "Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization",
     authors: "Sinha Afroz, Lei Zhang",
     venue: "Frontiers in Virtual Reality",
-    status: "Accepted",
+    type: "Journal",
+    status: "Published",
     links: [{ label: "Frontiers", url: "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" }],
     tags: ["XR", "Oncology", "Scoping Review"],
   },
@@ -24,6 +25,7 @@ const publications = [
     title: "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation",
     authors: "Sinha Afroz, Lei Zhang",
     venue: "IEEE VR 2026",
+    type: "Conference",
     status: "Published",
     links: [
       { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/document/11489916" },
@@ -36,6 +38,7 @@ const publications = [
     title: "Real-Time Face Recognition with Mask using Deep Convolutional Neural Network",
     authors: "Md. Ashif Mahmud Joy, Md. Fuad Hasan Khan Chowdhury, Sinha Afroz, Md. Nurul Islam, Ruaida Muhsinat, Mukta Akanda Moly, Dewan Md. Farid",
     venue: "CNIOT '23, Xiamen, China (ACM)",
+    type: "Conference",
     status: "Published",
     links: [
       { label: "DOI", url: "https://doi.org/10.1145/3603781.3603863" },
@@ -61,6 +64,13 @@ const Publications = () => {
               </p>
 
               <div className="mt-2 flex flex-wrap items-center gap-3">
+                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                  pub.type === "Journal"
+                    ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400"
+                    : "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400"
+                }`}>
+                  {pub.type}
+                </span>
                 <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                   pub.status === "Published"
                     ? "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400"

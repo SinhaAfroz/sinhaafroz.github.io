@@ -50,7 +50,7 @@ const About = () => {
             {[
               {
                 title: "Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization",
-                meta: <><strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">Frontiers in Virtual Reality</span> &mdash; Accepted. &nbsp;<a href="https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Frontiers</a></>,
+                meta: <><strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">Frontiers in Virtual Reality</span> &mdash; Published, Jun 2026. &nbsp;<a href="https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Frontiers</a></>,
               },
               {
                 title: "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation",
@@ -121,7 +121,7 @@ const About = () => {
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-secondary mb-3">Achievements &amp; Recognition</h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm list-disc list-inside">
-            <li>Paper accepted in <span className="font-semibold">Frontiers in Virtual Reality</span> (April 2025) — scoping review of XR in oncology.</li>
+            <li>Paper published in <span className="font-semibold">Frontiers in Virtual Reality</span> (Jun 2026) — scoping review of XR in oncology.</li>
             <li>Published at <span className="font-semibold">IEEE VR 2026</span> — multi-user VR system for medical imaging presentation. <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">IEEE Xplore</a></li>
             <li>Published at <span className="font-semibold">CNIOT &apos;23</span> (ACM); awarded complimentary ACM Membership (Aug 2023 – Sep 2024).</li>
             <li>Graduated with <span className="font-semibold">Magna Cum Laude</span> honors at UIU 2022 convocation; earned merit scholarships throughout.</li>

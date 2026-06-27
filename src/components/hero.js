@@ -6,6 +6,10 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/f
 
 const newsItems = [
   {
+    date: "Jun 2026",
+    text: 'Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and Mixed Reality Applications for 3D Solid Tumor Visualization".',
+  },
+  {
     date: "May 2026",
     text: 'Paper published at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal VR System for Medical Imaging Presentation".',
   },
