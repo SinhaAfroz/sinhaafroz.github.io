@@ -14,6 +14,10 @@ const newsItems = [
     text: 'Paper published at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal VR System for Medical Imaging Presentation".',
   },
   {
+    date: "May 2026",
+    text: "🎉 Passed the Ph.D. Comprehensive Exam at Kennesaw State University.",
+  },
+  {
     date: "Apr 2026",
     text: 'Paper accepted in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and Mixed Reality Applications for 3D Solid Tumor Visualization".',
   },
