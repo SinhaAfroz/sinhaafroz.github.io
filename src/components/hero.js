@@ -2,32 +2,43 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
+
+const NEWS_PREVIEW = 6;
 
 const newsItems = [
   {
+    date: "Jul 2026",
+    text: '🎉 Paper accepted at IEEE ISMAR 2026 (Adjunct Proceedings) — "A Human-in-the-Loop Immersive Generative VR System for Imagery-Based Psychotherapeutic Practices" (with collaborators from University of Miami & St. Jude Children\'s Research Hospital).',
+  },
+  {
+    date: "Jul 2026",
+    text: <>Featured in <a href="https://www.kennesaw.edu/news/stories/2026/professor-advances-virtual-reality-grief-support.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">KSU News</a> — &quot;From Personal Tragedy to Innovation: Professor Advances Virtual Reality Grief Support&quot;, highlighting our VR research at the DreamSpace Lab.</>,
+  },
+  {
     date: "Jun 2026",
-    text: 'Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and Mixed Reality Applications for 3D Solid Tumor Visualization".',
+    text: 'Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization." Front. Virtual Real. 7:1780348.',
   },
   {
     date: "May 2026",
-    text: 'Paper published at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal VR System for Medical Imaging Presentation".',
+    text: 'Paper published at IEEE VRW 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation," pp. 1339–1340.',
   },
   {
     date: "May 2026",
-    text: "🎉 Passed the Ph.D. Comprehensive Exam at Kennesaw State University.",
-  },
-  {
-    date: "Apr 2026",
-    text: 'Paper accepted in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and Mixed Reality Applications for 3D Solid Tumor Visualization".',
+    text: "🎉 Passed the Ph.D. Comprehensive Exam (Breadth + Depth) at Kennesaw State University.",
   },
   {
     date: "Jan 2026",
-    text: 'Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal VR System for Medical Imaging Presentation".',
+    text: '🎉 Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation".',
   },
   {
-    date: "Aug 2025",
-    text: "Started Ph.D. at Kennesaw State University; joined the DreamSpace Lab as a Graduate Research Assistant.",
+    date: "Apr 2026",
+    text: '🎉 Paper accepted in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization".',
+  },
+  {
+    date: "Aug 2024",
+    text: "🎉 Started Ph.D. at Kennesaw State University; joined the DreamSpace Lab as a Graduate Research Assistant under Dr. Lei Zhang.",
   },
   {
     date: "Jul 2023",
@@ -40,6 +51,7 @@ const newsItems = [
 ];
 
 const Hero = () => {
+  const [showAllNews, setShowAllNews] = useState(false);
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -125,13 +137,21 @@ const Hero = () => {
           <section className="mt-14">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">News</h2>
             <ul className="space-y-3">
-              {newsItems.map((item, i) => (
+              {(showAllNews ? newsItems : newsItems.slice(0, NEWS_PREVIEW)).map((item, i) => (
                 <li key={i} className="flex gap-4 text-sm text-gray-700 dark:text-gray-300">
                   <span className="min-w-[90px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{item.date}</span>
                   <span>{item.text}</span>
                 </li>
               ))}
             </ul>
+            {newsItems.length > NEWS_PREVIEW && (
+              <button
+                onClick={() => setShowAllNews(!showAllNews)}
+                className="mt-4 text-sm text-primary hover:underline"
+              >
+                {showAllNews ? "Show less ↑" : `Show all ${newsItems.length} items ↓`}
+              </button>
+            )}
           </section>
 
 

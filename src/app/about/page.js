@@ -46,27 +46,69 @@ const About = () => {
 
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-secondary mb-3">Research &amp; Publications</h2>
-          <div className="space-y-4">
-            {[
-              {
-                title: "Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization",
-                meta: <><strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">Frontiers in Virtual Reality</span> &mdash; Published, Jun 2026. &nbsp;<a href="https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Frontiers</a></>,
-              },
-              {
-                title: "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation",
-                meta: <><strong>Sinha Afroz</strong>, Lei Zhang &mdash; <span className="font-medium text-secondary">IEEE VR 2026</span> &mdash; Published. &nbsp;<a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">IEEE Xplore</a> &nbsp;<a href="https://par.nsf.gov/servlets/purl/10686348" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">PDF</a></>,
-              },
-              {
-                title: "Real-Time Face Recognition with Mask using Deep Convolutional Neural Network",
-                meta: <>Md. Ashif Mahmud Joy, Md. Fuad Hasan Khan Chowdhury, <strong>Sinha Afroz</strong>, Md. Nurul Islam, Ruaida Muhsinat, Mukta Akanda Moly, Dewan Md. Farid &mdash; <span className="font-medium text-secondary">CNIOT &apos;23</span>, Xiamen, China, 2023. &nbsp;<a href="https://doi.org/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">DOI</a> &nbsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">PDF</a></>,
-              },
-            ].map((pub, i) => (
-              <div key={i} className="border-l-4 border-secondary pl-4">
-                <p className="font-semibold text-gray-800 dark:text-gray-100">{pub.title}</p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{pub.meta}</p>
+          <ol className="space-y-6 list-none">
+
+            {/* [1] */}
+            <li className="flex gap-4 text-sm">
+              <span className="text-secondary font-semibold shrink-0 mt-0.5">[1]</span>
+              <div>
+                <p className="text-gray-800 dark:text-gray-100 leading-snug">
+                  <strong>S. Afroz</strong>, W. G. Lichtenthal, E. C. Kaye, and L. Zhang, &ldquo;A Human-in-the-Loop Immersive Generative Virtual Reality System for Imagery-Based Psychotherapeutic Practices,&rdquo; <span className="italic">IEEE International Symposium on Mixed and Augmented Reality (ISMAR) — Adjunct Proceedings</span>, 2026.
+                </p>
+                <p className="mt-1 text-xs">
+                  <span className="inline-block bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium">Accepted</span>
+                </p>
               </div>
-            ))}
-          </div>
+            </li>
+
+            {/* [2] */}
+            <li className="flex gap-4 text-sm">
+              <span className="text-secondary font-semibold shrink-0 mt-0.5">[2]</span>
+              <div>
+                <p className="text-gray-800 dark:text-gray-100 leading-snug">
+                  <strong>S. Afroz</strong> and L. Zhang, &ldquo;Immersive Extended Reality (XR) in Oncology: A Scoping Review of Virtual Reality (VR) and Mixed Reality (MR) Applications for 3D Solid Tumor Visualization,&rdquo; <span className="italic">Frontiers in Virtual Reality</span>, vol. 7, p. 1780348, 2026.
+                </p>
+                <p className="mt-1 flex gap-3 text-xs">
+                  <span className="inline-block bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Published</span>
+                  <a href="https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1780348/abstract" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Frontiers</a>
+                  <a href="https://doi.org/10.3389/frvir.2026.1780348" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">DOI</a>
+                </p>
+              </div>
+            </li>
+
+            {/* [3] */}
+            <li className="flex gap-4 text-sm">
+              <span className="text-secondary font-semibold shrink-0 mt-0.5">[3]</span>
+              <div>
+                <p className="text-gray-800 dark:text-gray-100 leading-snug">
+                  <strong>S. Afroz</strong>, D. Haynes, R. Freeman, M. Prather, F. Lu, B. Zhao, J. Li, S. Jung, and L. Zhang, &ldquo;Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation,&rdquo; in <span className="italic">2026 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW) — 3DUI Contest Demo</span>, Daegu, Korea, 2026, pp. 1339–1340.
+                </p>
+                <p className="mt-1 flex gap-3 text-xs">
+                  <span className="inline-block bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Published</span>
+                  <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">IEEE Xplore</a>
+                  <a href="https://doi.org/10.1109/VRW70859.2026.00344" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">DOI</a>
+                  <a href="https://par.nsf.gov/servlets/purl/10686348" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">PDF</a>
+                </p>
+              </div>
+            </li>
+
+            {/* [4] */}
+            <li className="flex gap-4 text-sm">
+              <span className="text-secondary font-semibold shrink-0 mt-0.5">[4]</span>
+              <div>
+                <p className="text-gray-800 dark:text-gray-100 leading-snug">
+                  Md. A. Mahmud Joy, Md. F. H. Khan Chowdhury, <strong>S. Afroz</strong>, Md. N. Islam, R. Muhsinat, M. A. Moly, and D. Md. Farid, &ldquo;Real-Time Face Recognition with Mask using Deep Convolutional Neural Network,&rdquo; in <span className="italic">Proc. 2023 4th Int. Conf. Computing, Networks and Internet of Things (CNIOT &apos;23)</span>, Xiamen, China, 2023, pp. 457–461.
+                </p>
+                <p className="mt-1 flex gap-3 text-xs">
+                  <span className="inline-block bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Published</span>
+                  <a href="https://doi.org/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">DOI</a>
+                  <a href="https://dl.acm.org/doi/pdf/10.1145/3603781.3603863" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">PDF</a>
+                  <a href="https://www.researchgate.net/publication/372694340_Real-Time_Face_Recognition_with_Mask_using_Deep_Convolutional_Neural_Network" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">ResearchGate</a>
+                </p>
+              </div>
+            </li>
+
+          </ol>
         </div>
 
         <div className="mb-10">
