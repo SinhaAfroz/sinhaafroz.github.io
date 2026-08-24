@@ -14,39 +14,39 @@ const newsItems = [
   },
   {
     date: "Jul 2026",
-    text: <>Featured in <a href="https://www.kennesaw.edu/news/stories/2026/professor-advances-virtual-reality-grief-support.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">KSU News</a> — &quot;From Personal Tragedy to Innovation: Professor Advances Virtual Reality Grief Support&quot;, highlighting our VR research at the DreamSpace Lab.</>,
+    text: <>🎉 Featured in <a href="https://www.kennesaw.edu/news/stories/2026/professor-advances-virtual-reality-grief-support.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">KSU News</a> — &quot;From Personal Tragedy to Innovation: Professor Advances Virtual Reality Grief Support&quot;, highlighting our VR research at the DreamSpace Lab.</>,
   },
   {
     date: "Jun 2026",
-    text: 'Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization." Front. Virtual Real. 7:1780348.',
+    text: '🎉 Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization." Front. Virtual Real. 7:1780348.',
   },
   {
     date: "May 2026",
-    text: 'Paper published at IEEE VRW 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation," pp. 1339–1340.',
+    text: '🎉 Paper published at IEEE VRW 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation," pp. 1339–1340.',
   },
   {
     date: "May 2026",
     text: "🎉 Passed the Ph.D. Comprehensive Exam (Breadth + Depth) at Kennesaw State University.",
   },
   {
-    date: "Jan 2026",
-    text: '🎉 Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation".',
-  },
-  {
     date: "Apr 2026",
     text: '🎉 Paper accepted in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization".',
   },
   {
-    date: "Aug 2024",
+    date: "Jan 2026",
+    text: '🎉 Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation".',
+  },
+  {
+    date: "Aug 2025",
     text: "🎉 Started Ph.D. at Kennesaw State University; joined the DreamSpace Lab as a Graduate Research Assistant under Dr. Lei Zhang.",
   },
   {
     date: "Jul 2023",
-    text: 'Published "Real-Time Face Recognition with Mask using Deep CNN" at CNIOT \'23, Xiamen, China.',
+    text: '🎉 Published "Real-Time Face Recognition with Mask using Deep CNN" at CNIOT \'23, Xiamen, China.',
   },
   {
     date: "Spring 2019",
-    text: 'Won 1st place at UIU CSE Project Show for Water Cleaning Boat "Simsibin".',
+    text: '🎉 Won 1st place at UIU CSE Project Show for Water Cleaning Boat "Simsibin".',
   },
 ];
 
@@ -136,7 +136,7 @@ const Hero = () => {
           {/* ── News ── */}
           <section className="mt-14">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">News</h2>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-justify">
               {(showAllNews ? newsItems : newsItems.slice(0, NEWS_PREVIEW)).map((item, i) => (
                 <li key={i} className="flex gap-4 text-sm text-gray-700 dark:text-gray-300">
                   <span className="min-w-[90px] font-medium text-gray-400 dark:text-gray-500 shrink-0">{item.date}</span>
