@@ -8,9 +8,7 @@ const researchProjects = [
     tech: ["Unity", "VR", "Generative AI", "HCI"],
     status: "Accepted — IEEE ISMAR 2026 (Adjunct Proceedings)",
     statusColor: "yellow",
-    links: [
-      { label: "Demo", url: "https://kennesawedu-my.sharepoint.com/:v:/g/personal/safroz1_students_kennesaw_edu/IQBmoOrphZqTR4O2fMiqomohAamtsJ0TN5MM8r6-vugzveo?e=r4VnRF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" },
-    ],
+    demo: "https://kennesawedu-my.sharepoint.com/:v:/g/personal/safroz1_students_kennesaw_edu/IQBmoOrphZqTR4O2fMiqomohAamtsJ0TN5MM8r6-vugzveo?e=r4VnRF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
   },
   {
     title: "Beyond Slices: Multi-User, Multi-Modal VR for Medical Imaging",
@@ -19,11 +17,11 @@ const researchProjects = [
     tech: ["Unity", "VR", "Multi-User Networking", "Medical Imaging"],
     status: "Published — IEEE VRW 2026, pp. 1339–1340",
     statusColor: "green",
+    demo: "https://kennesawedu-my.sharepoint.com/:v:/g/personal/safroz1_students_kennesaw_edu/IQAp6qMgaTQaRY95bGONFx1bAQ7BOFzlVoBNKrfuicFO-Rs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=q1hkzy",
     links: [
       { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11489916" },
       { label: "DOI", url: "https://doi.org/10.1109/VRW70859.2026.00344" },
       { label: "PDF", url: "https://par.nsf.gov/servlets/purl/10686348" },
-      { label: "Demo", url: "https://kennesawedu-my.sharepoint.com/:v:/g/personal/safroz1_students_kennesaw_edu/IQAp6qMgaTQaRY95bGONFx1bAQ7BOFzlVoBNKrfuicFO-Rs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=q1hkzy" },
     ],
   },
 ];
@@ -92,6 +90,11 @@ const professionalProjects = [
   },
 ];
 
+const isEmbeddable = (url) =>
+  url.includes("youtube.com/embed") ||
+  url.includes("drive.google.com") ||
+  url.includes("vimeo.com");
+
 const statusColors = {
   green: "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400",
   yellow: "bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-400",
@@ -123,6 +126,20 @@ const Projects = () => {
               <div key={i} className="border border-gray-200 dark:border-gray-700 rounded-lg p-5 bg-gray-50 dark:bg-gray-900">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-base leading-snug">{project.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">{project.description}</p>
+                {project.demo && (
+                  isEmbeddable(project.demo) ? (
+                    <div className="mt-4">
+                      <iframe width="100%" height="280" src={project.demo} title={project.title}
+                        frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen className="rounded-lg" />
+                    </div>
+                  ) : (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                      className="inline-block mt-3 text-xs text-blue-600 dark:text-blue-400 hover:underline">
+                      [Watch Demo ↗]
+                    </a>
+                  )
+                )}
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${statusColors[project.statusColor]}`}>
                     {project.status}

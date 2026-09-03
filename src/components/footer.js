@@ -20,7 +20,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="text-xs text-gray-400" suppressHydrationWarning>&copy; {new Date().getFullYear()} Sinha Afroz</p>
+        <p className="text-xs text-gray-400" suppressHydrationWarning>&copy; {new Date().getFullYear()} Sinha Afroz &mdash; Last updated: September 2026</p>
 
       </div>
     </footer>

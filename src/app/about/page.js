@@ -143,6 +143,35 @@ const About = () => {
         </div>
 
         <div className="mb-10">
+          <h2 className="text-2xl font-bold text-secondary mb-3">Teaching &amp; Mentoring</h2>
+          <div className="space-y-6">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">Mentor</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Kennesaw State University — DreamSpace Lab</p>
+                <ul className="mt-2 space-y-1 text-sm text-gray-600 dark:text-gray-400 list-disc list-inside">
+                  <li>Mentored an undergraduate student on Unity and VR development.</li>
+                </ul>
+              </div>
+              <span className="text-sm text-gray-400 dark:text-gray-500 whitespace-nowrap ml-6">Summer 2026</span>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">Secondary Instructor</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Vertically Integrated Projects (VIP), Section 16 — Kennesaw State University</p>
+                <ul className="mt-2 space-y-1 text-sm text-gray-600 dark:text-gray-400 list-disc list-inside">
+                  <li>Serve as secondary instructor supporting undergraduate students on VR and Unity-based research projects.</li>
+                  <li>Mentor students by defining project milestones, reviewing deliverables, and troubleshooting technical issues.</li>
+                  <li>Provide guidance on Unity, VR development, and GitHub workflows.</li>
+                  <li>Coordinate student progress and weekly project meetings with the faculty instructor.</li>
+                </ul>
+              </div>
+              <span className="text-sm text-gray-400 dark:text-gray-500 whitespace-nowrap ml-6">Fall 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-10">
           <h2 className="text-2xl font-bold text-secondary mb-3">Industry Experience</h2>
           <div className="flex justify-between items-start">
             <div>
@@ -162,14 +191,24 @@ const About = () => {
 
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-secondary mb-3">Achievements &amp; Recognition</h2>
-          <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm list-disc list-inside">
-            <li>Paper published in <span className="font-semibold">Frontiers in Virtual Reality</span> (Jun 2026) — scoping review of XR in oncology.</li>
-            <li>Published at <span className="font-semibold">IEEE VR 2026</span> — multi-user VR system for medical imaging presentation. <a href="https://ieeexplore.ieee.org/document/11489916" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">IEEE Xplore</a></li>
-            <li>Published at <span className="font-semibold">CNIOT &apos;23</span> (ACM); awarded complimentary ACM Membership (Aug 2023 – Sep 2024).</li>
-            <li>Graduated with <span className="font-semibold">Magna Cum Laude</span> honors at UIU 2022 convocation; earned merit scholarships throughout.</li>
-            <li><span className="font-semibold">1st Place</span> — UIU CSE Project Show (Spring 2019) for Water Cleaning Boat "Simsibin".</li>
-            <li>Bangladesh Math Olympiad participant (2012).</li>
-          </ul>
+          <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+            {[
+              { title: "Dean's 4.0 Club", date: "Fall 2025, Spring 2026", detail: "Kennesaw State University — recognition for achieving a perfect GPA in the PhD program." },
+              { title: "Magna Cum Laude", date: "2024", detail: "United International University — awarded at convocation for consistent academic excellence (CGPA 3.89/4.00)." },
+              { title: "Merit Scholarship", date: "2017–2022", detail: "United International University — full scholarship maintained across all academic years based on performance." },
+              { title: "1st Prize — Water Cleaning Bot", date: "2019", detail: "UIU CSE Project Show — awarded for developing an autonomous surface waste management system for water bodies." },
+              { title: "ACM Membership", date: "Aug 2023 – Sep 2024", detail: "Complimentary membership awarded upon publication at CNIOT '23." },
+              { title: "Bangladesh Math Olympiad", date: "2012", detail: "Participant." },
+            ].map((a, i) => (
+              <div key={i} className="flex justify-between items-start gap-4">
+                <div>
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">{a.title}</p>
+                  <p className="text-gray-500 dark:text-gray-400">{a.detail}</p>
+                </div>
+                <span className="text-gray-400 dark:text-gray-500 whitespace-nowrap">{a.date}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
