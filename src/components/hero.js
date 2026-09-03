@@ -10,19 +10,19 @@ const NEWS_PREVIEW = 6;
 const newsItems = [
   {
     date: "Jul 2026",
-    text: '🎉 Paper accepted at IEEE ISMAR 2026 (Adjunct Proceedings) — "A Human-in-the-Loop Immersive Generative VR System for Imagery-Based Psychotherapeutic Practices" (with collaborators from University of Miami & St. Jude Children\'s Research Hospital).',
+    text: '🎉 Paper accepted at IEEE ISMAR 2026 (Adjunct Proceedings): "A Human-in-the-Loop Immersive Generative VR System for Imagery-Based Psychotherapeutic Practices" (with collaborators from University of Miami & St. Jude Children\'s Research Hospital).',
   },
   {
     date: "Jul 2026",
-    text: <>🎉 Featured in <a href="https://www.kennesaw.edu/news/stories/2026/professor-advances-virtual-reality-grief-support.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">KSU News</a> — &quot;From Personal Tragedy to Innovation: Professor Advances Virtual Reality Grief Support&quot;, highlighting our VR research at the DreamSpace Lab.</>,
+    text: <>🎉 Featured in <a href="https://www.kennesaw.edu/news/stories/2026/professor-advances-virtual-reality-grief-support.php" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">KSU News</a>: &quot;From Personal Tragedy to Innovation: Professor Advances Virtual Reality Grief Support&quot;, highlighting our VR research at the DreamSpace Lab.</>,
   },
   {
     date: "Jun 2026",
-    text: '🎉 Paper published in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization." Front. Virtual Real. 7:1780348.',
+    text: '🎉 Paper published in Frontiers in Virtual Reality: "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization." Front. Virtual Real. 7:1780348.',
   },
   {
     date: "May 2026",
-    text: '🎉 Paper published at IEEE VRW 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation," pp. 1339–1340.',
+    text: '🎉 Paper published at IEEE VRW 2026: "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation," pp. 1339–1340.',
   },
   {
     date: "May 2026",
@@ -30,11 +30,11 @@ const newsItems = [
   },
   {
     date: "Apr 2026",
-    text: '🎉 Paper accepted in Frontiers in Virtual Reality — "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization".',
+    text: '🎉 Paper accepted in Frontiers in Virtual Reality: "Immersive Extended Reality (XR) in Oncology: A Scoping Review of VR and MR Applications for 3D Solid Tumor Visualization".',
   },
   {
     date: "Jan 2026",
-    text: '🎉 Paper accepted at IEEE VR 2026 — "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation".',
+    text: '🎉 Paper accepted at IEEE VR 2026: "Beyond Slices: A Narrative-Driven, Multi-User, Multi-Modal Virtual Reality System for Medical Imaging Presentation".',
   },
   {
     date: "Aug 2025",
@@ -83,6 +83,14 @@ const Hero = () => {
               className="rounded-full object-cover w-40 md:w-48 aspect-square"
             />
           </div>
+          {/* Affiliation */}
+          <div className="mt-3 text-center text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            <p className="font-medium text-gray-700 dark:text-gray-300">Ph.D. Student, Computer Science</p>
+            <p><a href="https://www.kennesaw.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Kennesaw State University</a></p>
+            <p className="mt-1">Graduate Research Assistant</p>
+            <p><span className="font-medium">DreamSpace Lab</span></p>
+            <p className="mt-1">Advisor: <span className="font-medium">Dr. Lei Zhang</span></p>
+          </div>
           {/* Quick links */}
           <div className="flex flex-row flex-wrap justify-center md:flex-col gap-2 w-full mt-2">
             <a href="/CV.pdf" target="_blank" rel="noopener noreferrer"
@@ -111,26 +119,17 @@ const Hero = () => {
         {/* Left on desktop: text */}
         <div className="flex-1">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Sinha Afroz</h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-            Ph.D. Student, Computer Science &mdash; <a href="https://www.kennesaw.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Kennesaw State University</a><br />
-            Graduate Research Assistant, <span className="font-medium">DreamSpace Lab</span><br />
-            Advisor: <span className="font-medium">Dr. Lei Zhang</span>
-          </p>
 
           <p className="mt-5 text-gray-700 dark:text-gray-300 leading-relaxed text-justify text-sm">
-            I research <span className="font-semibold">Extended Reality (XR)</span> and{" "}
-            <span className="font-semibold">Virtual Reality (VR)</span> applications in healthcare,
-            designing immersive, human-centered technologies for real-world clinical use. My current
-            project is a multi-user, multi-modal VR system for collaborative medical imaging visualization,
-            published at <span className="font-semibold">IEEE VR 2026</span>.
+            I was born and raised in Dhaka, Bangladesh, and graduated in Computer Science and Engineering from{" "}
+            <a href="https://www.uiu.ac.bd" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">United International University</a>{" "}
+            with <span className="font-semibold">Magna Cum Laude</span> honors. After completing my studies, I worked as a Software Engineer, gaining hands-on experience in software development, system design, and data handling.
           </p>
           <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed text-justify text-sm">
-            I completed my B.Sc. in CSE from{" "}
-            <a href="https://www.uiu.ac.bd" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-              United International University
-            </a>{" "}
-            with <span className="font-semibold">Magna Cum Laude</span> honors, and previously
-            worked as a Software Engineer building full-stack airline ticketing systems.
+            I am currently pursuing my PhD in Computer Science at{" "}
+            <a href="https://www.kennesaw.edu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Kennesaw State University</a>,
+            where my research focuses on <span className="font-semibold">Extended Reality (XR)</span> and{" "}
+            <span className="font-semibold">Virtual Reality (VR)</span> in healthcare through immersive and human-centered technologies that contribute to real-world clinical solutions.
           </p>
 
           {/* ── News ── */}
