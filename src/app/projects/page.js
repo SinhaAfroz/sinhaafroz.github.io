@@ -136,7 +136,7 @@ const Projects = () => {
                   ) : (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer"
                       className="inline-block mt-3 text-xs text-blue-600 dark:text-blue-400 hover:underline">
-                      [Watch Demo ↗]
+                      [Watch Demo]
                     </a>
                   )
                 )}
