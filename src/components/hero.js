@@ -76,7 +76,7 @@ const Hero = () => {
             className="p-1 rounded-full ring-2 ring-primary ring-offset-4 ring-offset-white dark:ring-offset-gray-950"
             style={{ transition: "transform 0.15s ease", transformStyle: "preserve-3d", cursor: "pointer" }}>
             <Image
-              src="/profile2.jpg"
+              src="/pic2.png"
               alt="Sinha Afroz"
               width={200}
               height={200}
